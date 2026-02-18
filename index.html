@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glowify Beauty Shop</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <p>Free shipping for all PH users</p>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">Beverly Products</div>
+      <nav class="nav-links">
+        <a href="#" class="nav-link active">Home</a>
+        <a href="#" class="nav-link">Shop</a>
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" aria-label="Search">
+          🔍
+        </button>
+        <button class="icon-button cart-button" aria-label="Shopping cart">
+          🛒
+          <span class="cart-count">3</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header container">
+      <p class="eyebrow">Skincare Collection</p>
+      <h1>Shop</h1>
+      <p class="page-subtitle">
+        Discover gentle, effective formulas designed to keep your skin glowing every day.
+      </p>
+    </section>
+
+    <section class="filters container">
+      <div class="filters-label">Shop by category:</div>
+      <div class="filters-buttons">
+        <button class="pill-button active" data-filter="all">All</button>
+        <button class="pill-button" data-filter="face">Face Care</button>
+        <button class="pill-button" data-filter="serum">Serums</button>
+        <button class="pill-button" data-filter="body">Body Care</button>
+        <button class="pill-button" data-filter="mask">Masks</button>
+        <button class="pill-button" data-filter="hair">Hair Care</button>
+      </div>
+    </section>
+
+    <section class="product-section">
+      <div class="container">
+        <div class="product-grid">
+          <article class="product-card" data-category="serum face">
+            <div class="product-image">
+              <img src="pictures/lailai.jpg" alt="Vitamin C Radiance Serum bottle on a vanity" />
+            </div>
+            <div class="product-content">
+              <h3>Vitamin C Radiance Serum</h3>
+              <p class="product-price">$32.00</p>
+              <p class="product-description">
+                Brightens dull skin with a stable 15% vitamin C blend, hyaluronic acid, and botanical antioxidants.
+              </p>
+              <button class="primary-button">Add to cart</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="face">
+            <div class="product-image">
+              <img src="pictures/lailai.jpg" alt="Moisturizer cream applied to face" />
+            </div>
+            <div class="product-content">
+              <h3>Hydra Balance Face Cream</h3>
+              <p class="product-price">$28.00</p>
+              <p class="product-description">
+                Lightweight gel-cream that delivers all‑day hydration without clogging pores, perfect for combination skin.
+              </p>
+              <button class="primary-button">Add to cart</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="body">
+            <div class="product-image">
+              <img src="pictures/lailai.jpg" alt="Hands applying nourishing cream" />
+            </div>
+            <div class="product-content">
+              <h3>Silk Touch Hand Cream</h3>
+              <p class="product-price">$16.00</p>
+              <p class="product-description">
+                Shea butter, ceramides, and vitamin E repair dry hands and cuticles without leaving a greasy finish.
+              </p>
+              <button class="primary-button">Add to cart</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="body">
+            <div class="product-image">
+              <img src="pictures/lailai.jpg" alt="Artisanal bar of soap on a tray" />
+            </div>
+            <div class="product-content">
+              <h3>Rose Clay Cleansing Bar</h3>
+              <p class="product-price">$12.00</p>
+              <p class="product-description">
+                Gentle rose clay and coconut-derived cleansers remove impurities while maintaining the skin’s moisture barrier.
+              </p>
+              <button class="primary-button">Add to cart</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="mask face">
+            <div class="product-image">
+              <img src="pictures/lailai.jpg" alt="Woman with a white face mask relaxing" />
+            </div>
+            <div class="product-content">
+              <h3>Calming Cloud Clay Mask</h3>
+              <p class="product-price">$24.00</p>
+              <p class="product-description">
+                A soothing blend of kaolin clay, oat extract, and chamomile to calm redness and draw out impurities.
+              </p>
+              <button class="primary-button">Add to cart</button>
+            </div>
+          </article>
+
+          <article class="product-card" data-category="hair">
+            <div class="product-image">
+              <img src="pictures/lailai.jpg" alt="Haircare products arranged on a marble surface" />
+            </div>
+            <div class="product-content">
+              <h3>Gloss Repair Hair Oil</h3>
+              <p class="product-price">$26.00</p>
+              <p class="product-description">
+                Lightweight hair oil that smooths frizz, adds shine, and protects ends with argan and jojoba oils.
+              </p>
+              <button class="primary-button">Add to cart</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Beverly Products. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const filterButtons = document.querySelectorAll('.pill-button');
+    const productCards = document.querySelectorAll('.product-card');
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const filter = button.dataset.filter;
+
+        filterButtons.forEach((b) => b.classList.remove('active'));
+        button.classList.add('active');
+
+        productCards.forEach((card) => {
+          const categories = card.dataset.category.split(' ');
+          if (filter === 'all' || categories.includes(filter)) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+  </script>
+</body>
+</html>
+
