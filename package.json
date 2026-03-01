@@ -1,0 +1,10 @@
+{
+  "name": "beauty-products-shop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static beauty products shop page with product cards and filters.",
+  "scripts": {
+    "start": "echo \"Open index.html in your browser to view the site.\""
+  }
+}
+
