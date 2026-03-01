@@ -292,6 +292,125 @@ img {
   display: none;
 }
 
+/* About section */
+.about-section {
+  padding: 3rem 0 3.5rem;
+  background: radial-gradient(circle at top left, #fceeff 0, #f7f4fb 40%, #f3ecff 100%);
+}
+
+.about-inner {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about-text {
+  flex: 1.4;
+  color: #3a223d;
+}
+
+.about-text h2 {
+  margin: 0 0 0.9rem;
+  font-size: 1.7rem;
+}
+
+.about-text p {
+  margin: 0 0 0.75rem;
+  font-size: 0.97rem;
+  color: #5c4560;
+}
+
+.about-quotes {
+  margin-top: 1rem;
+  padding-left: 0.75rem;
+  border-left: 3px solid rgba(179, 125, 248, 0.6);
+}
+
+.about-quote {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #4b3050;
+  margin: 0 0 0.5rem;
+}
+
+.about-photo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-photo-frame {
+  position: relative;
+  border-radius: 24px;
+  padding: 0.6rem;
+  background: linear-gradient(145deg, #b37df8, #ff9ec7);
+  box-shadow: 0 18px 45px rgba(93, 60, 182, 0.4);
+  max-width: 320px;
+  width: 100%;
+}
+
+.about-photo-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+}
+
+/* Contact section */
+.contact-section {
+  padding: 2.5rem 0 3rem;
+}
+
+.contact-inner {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.contact-text {
+  flex: 1.5;
+  color: #3a223d;
+}
+
+.contact-text h2 {
+  margin: 0 0 0.9rem;
+  font-size: 1.6rem;
+}
+
+.contact-text p {
+  margin: 0 0 0.75rem;
+  font-size: 0.97rem;
+  color: #5c4560;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+  font-size: 0.95rem;
+  color: #4b3050;
+}
+
+.contact-list li + li {
+  margin-top: 0.35rem;
+}
+
+.contact-card {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 1.25rem 1.4rem;
+  box-shadow: 0 14px 36px rgba(78, 44, 126, 0.12);
+  font-size: 0.9rem;
+  color: #5c4560;
+}
+
+.contact-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: #311638;
+}
+
 /* Footer */
 .site-footer {
   border-top: 1px solid rgba(93, 60, 138, 0.12);
@@ -348,6 +467,21 @@ img {
   .product-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .about-inner {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .about-quotes {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  .contact-inner {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 540px) {
@@ -367,4 +501,6 @@ img {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+
 
